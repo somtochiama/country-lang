@@ -72,7 +72,7 @@ export default {
 
 <style scoped>
 .select-input {
-  @apply block appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded
+  @apply block appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded w-full
 }
 
 .select-input:focus {
