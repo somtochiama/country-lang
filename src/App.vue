@@ -29,6 +29,10 @@ export default {
 
 <style>
 
+body {
+  @apply m-0 font-body
+}
+
 #app {
    background: linear-gradient(180deg, rgba(37, 35, 22, 0.82) 99.99%,
                rgba(255, 255, 255, 0) 100%),
