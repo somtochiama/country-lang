@@ -40,6 +40,10 @@ export default {
   @apply text-white uppercase mx-3
 }
 
+#nav a:hover {
+  @apply text-yellow-400
+}
+
 #nav p a {
   @apply capitalize underline
 }
