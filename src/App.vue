@@ -65,6 +65,6 @@ body {
 }
 
 .box {
-  @apply w-full max-w-lg mx-auto flex-col bg-white shadow-xl mt-6 rounded-lg;
+  @apply max-w-lg mx-auto flex-col bg-white shadow-xl mt-6 rounded-lg;
 }
 </style>
