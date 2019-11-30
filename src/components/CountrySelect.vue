@@ -8,7 +8,7 @@
               v-model="selectedCountryCode"
               class="select-input"
             >
-                <option disabled value="">Select a country</option>
+                <option disabled value="">Pick one country..</option>
                 <option
                     v-for="country in countries"
                     :value="country.code"
@@ -70,9 +70,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .select-input {
-  @apply block appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded w-full
+  @apply block appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded w-full;
+  box-sizing: border-box;
 }
 
 .select-input:focus {
