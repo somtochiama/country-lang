@@ -5,7 +5,7 @@
       <router-link to="/list">List</router-link>
       <div class="pt-5 text-right text-white">
         Email: <span class="text-yellow-400">{{ email || "Nil" }}</span>
-        <p><router-link to="/email" class="hover:text=whit">Change</router-link></p>
+        <p><router-link to="/email">Change</router-link></p>
       </div>
     </div>
     <main class="mt-16">

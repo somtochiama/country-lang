@@ -6,7 +6,7 @@
           <div class="relative mr-3">
             <select
               v-model="selectedCountryCode"
-              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded focus:outline-none focus:bg-white focus:border-yellow-500"
+              class="select-input"
             >
                 <option disabled value="">Select a country</option>
                 <option
@@ -71,5 +71,11 @@ export default {
 </script>
 
 <style scoped>
+.select-input {
+  @apply block appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded
+}
 
+.select-input:focus {
+  @apply outline-none bg-white border-yellow-500
+}
 </style>
