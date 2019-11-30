@@ -1,32 +1,62 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav" class="text-right p-8">
+      <router-link to="/">Home</router-link>
+      <router-link to="/list">List</router-link>
+      <div class="pt-5 text-right text-white">
+        Email: <span class="text-yellow-400">{{ email || "Nil" }}</span>
+        <p><router-link to="/email" class="hover:text=whit">Change</router-link></p>
+      </div>
     </div>
-    <router-view/>
+    <main class="mt-16">
+      <router-view/>
+    </main>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import '@/assets/css/tailwind.css'
 
-#nav {
-  padding: 30px;
+export default {
+  name: 'app',
+  computed: {
+    email () {
+      return this.$store.state.email
+    }
+  }
+}
+</script>
+
+<style>
+
+#app {
+   background: linear-gradient(180deg, rgba(37, 35, 22, 0.82) 99.99%,
+               rgba(255, 255, 255, 0) 100%),
+                url('./assets/background.jpg');
+    @apply bg-center bg-repeat bg-cover min-h-screen min-w-full text-gray-700
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  @apply text-white uppercase mx-3
+}
+
+#nav p a {
+  @apply capitalize underline
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+ @apply text-yellow-400
+}
+
+.btn {
+  @apply text-white py-2 px-4 rounded;
+}
+
+.btn:focus {
+  outline: none
+}
+
+.box {
+  @apply w-full max-w-lg mx-auto flex-col bg-white shadow-xl mt-6 rounded-lg;
 }
 </style>
